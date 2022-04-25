@@ -5,24 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
-    <script type = "text/javascript" src = "js/script.js"></script>
     <link rel = "stylesheet" href = "css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
-<body onload = "findDate()">
-    <div class = "calendar">
-        <div class = "calhead">April</div>
-        <div class = "daynames">
-            <p id = "sun" class = "dayname">Sunday</p>
-            <p id = "mon" class = "dayname">Monday</p>
-            <p id = "tues" class = "dayname">Tuesday</p>
-            <p id = "wed" class = "dayname">Wednesday</p>
-            <p id = "thurs" class = "dayname">Thursday</p>
-            <p id = "fri" class = "dayname">Friday</p>
-            <p id = "sat" class = "dayname">Saturday</p>
-        </div>
+<body>
+    <!-- <div class = "calendar">
+        <div class = "calhead"></div>
+        <div class = "daynames"></div>
         <div class = "week1">
             <p id = "d0" class = "day">0</p>
             <p id = "d0" class = "day">0</p>
@@ -69,5 +60,24 @@
             <p id = "d30" class = "day">30</p>
         </div>
     </div>
+ -->
+
+    <!-- Ms. Kaur Version -->
+    <div class = "monthname">
+        <h1></h1>
+    </div>
+    <div class = "calendar-body">
+        <div class = "calendar-weekDays">
+
+        </div>
+        <div class = "calendar-monthDays">
+
+        </div>
+        <div class = "buttons">
+        <button type = "button" class = "prevMonth"> &#8592 </button>
+        <button type = "button" class = "nextMonth"> &#8594 </button>
+        </div>
+    </div>
+    <script src = "js/main.js"></script>
 </body>
 </html>

@@ -1,238 +1,89 @@
-html{
-    width: 50%;
-    margin:auto;
-    font-family: 'Roboto', sans-serif;
-}
-.calendar{
+.calendar-body{
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas:
-    "calhead"
-    "daynames"
-    "week1"
-    "week2"
-    "week3"
-    "week4"
-    "week5";
-    border: black .2vw solid;
-    width: 50.01vw;
+    background-color: rgb(239, 239, 241);
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    border-bottom-right-radius: 2.5vw;
+    border-bottom-left-radius: 2.5vw;
 }
-.calhead{
-    grid-area: calhead;
-    margin-bottom: -1vw;
-    width: 50vw;
+
+.calendar-weekDays{
+    display: grid;
+    padding: 2%;
+    column-gap: 1%;
+    grid-template-columns: repeat(7, 1fr);
+    color: darkslategray;
+    font-size: 1.5vw;
+    margin-bottom: -1.5vw;
+}
+    .calendar-weekDays div{
+        background-color: lightsteelblue;
+        text-align: center;
+        width: 5vw;
+        padding: .5vw;
+        margin: 2%;
+    }
+
+.calendar-monthDays{
+    display: grid;
+    padding: 2%;
+    grid-template-columns: repeat(7, 1fr);
+    color: black;
+    column-gap: 1%;
+    row-gap: 10px;
+    font-size: 1.5vw;
+    text-align: right;
+}
+
+    .calendar-monthDays div{
+        background-color: darkslategrey;
+        height: 4vw;
+        padding: 10%;
+    }
+
+.monthname{
+    padding: 0;
+    width: 50%; 
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+
+
+h1{
+    font-size: 2vw;
+    padding: 5%;
+    text-align: center;
     background-color: rgb(66, 75, 83);
     color: white;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
-    font-size: 2.5vw;
+    margin-bottom: -2%;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    border-top-left-radius: 5vw;
+    border-top-right-radius: 5vw;
 }
-.daynames{
-    grid-template-areas: 
-    "sun mon tues wed thurs fri sat";
-    display: flex;
-    flex-direction: row;
-    margin-bottom: -1vw;
-    font-size: 1vw;
-    width: 50vw;
+
+.prev-date, .next-date{
+    opacity: 0.5;
 }
-.week1{
-    grid-template-areas: 
-    "0 0 0 0 0 1 2";
-    display: flex;
-    flex-direction: row;
-    width: 50vw;
-}
-.week2{
-    grid-template-areas: 
-    "3 4 5 6 7 8 9";
-    display: flex;
-    flex-direction: row;
-    width: 50vw;
-}
-.week3{
-    grid-template-areas: 
-    "10 11 12 13 14 15 16";
-    display: flex;
-    flex-direction: row;
-    width: 50vw;
-}
-.week4{
-    grid-template-areas: 
-    "17 18 19 20 21 22 23";
-    display: flex;
-    flex-direction: row;
-    width: 50vw;
-}
-.week5{
-    grid-template-areas: 
-    "24 25 26 27 28 29 30";
-    display: flex;
-    flex-direction: row;
-    width: 50vw;
-}
-.day{
+
+.buttons{
     padding: 1vw;
-    width: 5vw;
-    height: 5vw;
-    text-align: left;
-    margin: .1vw;
-    font-size: 1.25vw;
-}
-.dayname{
-    border: solid .1vw white;
-    padding: 1vw;
-    width: 5vw;
-    height: 2vw;
-    z-index: 5;
     text-align: center;
+    background-color: rgb(66, 75, 83);
+    border-bottom-right-radius: 2.5vw;
+    border-bottom-left-radius: 2.5vw;
+    display: flex;
+    justify-content: space-between;
+}
+.prevMonth, .nextMonth{
+    padding: 5px;
+    padding: .5vw 1vw;
     background-color: lightsteelblue;
+    font-size: 3vw;
+    margin: 0vw 1vw;
 }
-#sun{
-    grid-area: sun;
-}
-#mon{
-    grid-area: mon;
-}
-#tues{
-    grid-area: tues;
-}
-#wed{
-    grid-area: wed;
-}
-#thurs{
-    grid-area: thurs;
-}
-#fri{
-    grid-area: fri;
-}
-#sat{
-    grid-area: sat;
-}
-#d0{
-    background-color: white;
-    grid-area: 0;
-    color: white;
-}
-#d1{
-    background-color: lightslategray;
-    grid-area: 1;
-}
-#d2{
-    background-color: lightslategray;
-    grid-area: 2;
-}
-#d3{
-    background-color: lightslategray;
-    grid-area: 3;
-}
-#d4{
-    background-color: lightslategray;
-    grid-area: 4;
-}
-#d5{
-    background-color: lightslategray;
-    grid-area: 5;
-}
-#d6{
-    background-color: lightslategray;
-    grid-area: 6;
-}
-#d7{
-    background-color: lightslategray;
-    grid-area: 7;
-}
-#d8{
-    background-color: lightslategray;
-    grid-area: 8;
-}
-#d9{
-    background-color: lightslategray;
-    grid-area: 9;
-}
-#d10{
-    background-color: lightslategray;
-    grid-area: 10;
-}
-#d11{
-    background-color: lightslategray;
-    grid-area: 11;
-}
-#d12{
-    background-color: lightslategray;
-    grid-area: 12;
-}
-#d13{
-    background-color: lightslategray;
-    grid-area: 13;
-}
-#d14{
-    background-color: lightslategray;
-    grid-area: 14;
-}
-#d15{
-    background-color: lightslategray;
-    grid-area: 15;
-}
-#d16{
-    background-color: lightslategray;
-    grid-area: 16;
-}
-#d17{
-    background-color: lightslategray;
-    grid-area: 17;
-}
-#d18{
-    background-color: lightslategray;
-    grid-area: 18;
-}
-#d19{
-    background-color: lightslategray;
-    grid-area: 19;
-    color: black;
-}
-#d20{
-    background-color: lightslategray;
-    grid-area: 20;
-}
-#d21{
-    background-color: lightslategray;
-    grid-area: 21;
-}
-#d22{
-    background-color: lightslategray;
-    grid-area: 22;
-}
-#d23{
-    background-color: lightslategray;
-    grid-area: 23;
-}
-#d24{
-    background-color: lightslategray;
-    grid-area: 24;
-}
-#d25{
-    background-color: lightslategray;
-    grid-area: 25;
-}
-#d26{
-    background-color: lightslategray;
-    grid-area: 26;
-}
-#d27{
-    background-color: lightslategray;
-    grid-area: 27;
-}
-#d28{
-    background-color: lightslategray;
-    grid-area: 28;
-}
-#d29{
-    background-color: lightslategray;
-    grid-area: 29;
-}
-#d30{
-    background-color: lightslategray;
-    grid-area: 30;
-}
+
